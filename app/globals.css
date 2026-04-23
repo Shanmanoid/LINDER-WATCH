@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+:root {
+  /* Surfaces */
+  --color-paper: #f9f7f2;
+  --color-bone: #f0ece2;
+  --color-ink: #131312;
+  --color-graphite: #3e3d3a;
+  --color-mist: #65635e;
+  --color-rule: #d4cec1;
+
+  /* Accents */
+  --color-linder-blue: #1e3a6f;
+  --color-linder-red: #8b1a1a;
+  --color-linder-amber: #a67436;
+  --color-linder-amber-faint: #e8d9be;
+  --color-linder-amber-dark: #6b4a2a;
+  --color-linder-ink-deep: #1a1915;
+  --color-linder-stone: #f3efe5;
+  /* Paper-tinted grey for mist-level text that lands on ink-deep
+     (dark zone). Ratio ~7.4:1 on #1a1915 ✓. Do not use on paper —
+     fails there (~2.2:1). */
+  --color-linder-mist-on-dark: #a8a8a3;
+
+  /* Watch — case */
+  --color-case-steel: #c7c5c0;
+  --color-case-rose-gold: #c9a88b;
+  --color-case-yellow-gold: #d4b87c;
+  --color-case-blackened: #2a2826;
+
+  /* Watch — dial */
+  --color-dial-white: #ffffff;
+  --color-dial-silver: #f5f3ed;
+  --color-dial-black: #141412;
+  --color-dial-navy: #1a2f4f;
+  --color-dial-cream: #f5ebd5;
+
+  /* Watch — strap */
+  --color-strap-black: #1a1814;
+  --color-strap-brown: #4a2f1e;
+  --color-strap-tan: #a26b3e;
+  --color-strap-steel: #b8b5ae;
+  --color-strap-nato: #4a5568;
+}
+
+@theme inline {
+  /* Surface tokens — usable as bg-paper, text-ink, border-rule etc. */
+  --color-paper: var(--color-paper);
+  --color-bone: var(--color-bone);
+  --color-ink: var(--color-ink);
+  --color-graphite: var(--color-graphite);
+  --color-mist: var(--color-mist);
+  --color-rule: var(--color-rule);
+  --color-linder-blue: var(--color-linder-blue);
+  --color-linder-red: var(--color-linder-red);
+  --color-amber: var(--color-linder-amber);
+  --color-amber-faint: var(--color-linder-amber-faint);
+  --color-amber-dark: var(--color-linder-amber-dark);
+  --color-ink-deep: var(--color-linder-ink-deep);
+  --color-stone: var(--color-linder-stone);
+  --color-mist-on-dark: var(--color-linder-mist-on-dark);
+
+  /* Fonts — usable as font-display, font-sans, font-mono */
+  --font-display: var(--font-display);
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+}
+
+html,
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
